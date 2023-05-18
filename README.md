@@ -2,13 +2,18 @@
 
 SimplexLogger is a unidirectional single-threaded (i.e. non-duplex) logger. 
 
-The idea was derived from the code found at https://stackoverflow.com/questions/19231465/how-to-make-a-serial-port-sniffer-sniffing-physical-port-using-a-python.
+The idea was derived from the example found at https://stackoverflow.com/questions/19231465/how-to-make-a-serial-port-sniffer-sniffing-physical-port-using-a-python.
 
-Idea: shshank on stackoverflow https://stackoverflow.com/questions/19231465/how-to-make-a-serial-port-sniffer-sniffing-physical-port-using-a-python
+Idea: shshank
 
-Author: bjscsn@github; https://github.com/bjscsn
+Author: bjscsn@github https://github.com/bjscsn
 
 ## License
+
+This code is licensed under the *unlicense* license. (Don't laugh) For the folks at my age: This code is public domain. 
+Use it, copy it, modify it. I don't care. Just don't complain. 
+
+The original idea remains under the original idea's license CC BY-SA 3.0.
 
 ## Command line
 ```
