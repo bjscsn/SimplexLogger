@@ -122,6 +122,8 @@ typically does the trick.
 
 ## Futures
 
-JSON config file, Optional silent running with no stdout for batch processing, make some of the above configurable - But no promises at this point.
+JSON config file, Optional silent running with no stdout for batch processing, make some of the above configurable
+
+But no promises at this point.
 
 /END
