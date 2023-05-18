@@ -6,7 +6,7 @@ SimplexLogger is a unidirectional single-threaded logger. The idea was derived f
 """
 __build__ = "106"
 __created__ = "2023-05-18_12-59-19"
-__updated__ = "2023-05-18_16-33-29"
+__updated__ = "2023-05-18_19-00-53"
 
 # GLOBAL
 CRLF = "\n"
@@ -76,7 +76,7 @@ class SimplexLogger():
             print(">>> Session Start {} <<<".format(self._getTimeStamp()))
             try:
                 while True:
-                    buffer = listener.read_until()
+                    buffer = monitor.read_until()
                     print(buffer.decode('utf-8').strip())
             except KeyboardInterrupt as ki:
                 print(">>> Session   End {} <<<".format(self._getTimeStamp()))
