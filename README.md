@@ -49,7 +49,7 @@ If *log_filename* is not provided, the tools prints to **stdout**. The tools ann
 Logging is stopped by pressing CTL-C. When CTL-C is pressed, a session stop marker is logged to screen and the tools exists. The result can then be copied and pasted from the terminal. Only the session start and the stop markers have a time stamp.
 
 ### File Log Mode
-If *log_filename* is provided, the tool logs to the logfile name provided. The tools logs a time stamp before every record read from COM. There are three types logged. A session start marker, the data read from the port and a session stop marker. The time stamp is comma-separated from the record.
+If *log_filename* is provided, the tool logs to the logfile name provided. The tools logs a time stamp before every record read from COM. There are three types or records logged. A session start marker, the data read from the port and a session stop marker. The time stamp is comma-separated from the record.
 The screen output behaviour however is different from the behaviour previously described. The tool announces itself and marks the start of data reading. The tool will also print the data read to screen, to allow monitoring of the data flow. The tool will however not advance the line.
 This makes the screen output very compact, which is an advantage during long runs. Logging is stopped by pressing CTL-C. When CTL-C is pressed, a session stop marker is logged to screen and the log file and the tools exists.
 
