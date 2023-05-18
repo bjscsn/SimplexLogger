@@ -6,7 +6,7 @@ Script to run the monotor for a com port.
 """
 __build__ = "111"
 __created__ = "2023-05-18_13-38-49"
-__updated__ = "2023-05-18_15-35-08"
+__updated__ = "2023-05-18_15-51-31"
 
 def parameters2dict(parameters)->dict:
     """

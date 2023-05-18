@@ -6,7 +6,7 @@ SimplexLogger is a unidirectional single-threaded logger. The idea was derived f
 """
 __build__ = "104"
 __created__ = "2023-05-18_12-59-19"
-__updated__ = "2023-05-18_15-35-20"
+__updated__ = "2023-05-18_15-51-34"
 
 # GLOBAL
 CRLF = "\n"
