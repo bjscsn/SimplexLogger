@@ -122,7 +122,9 @@ typically does the trick.
 
 ## Futures
 
-JSON config file, Optional silent running with no stdout for batch processing, make some of the above configurable
+- JSON config file
+- make some of the above configurable
+- Optional silent running with no stdout for batch processing
 
 But no promises at this point.
 
