@@ -2,7 +2,7 @@
 """
 SimplexLogger.py
 
-SimplexLogger is a unidirectional single-threaded logger. The idea was derived from the code found at https://stackoverflow.com/questions/19231465/how-to-make-a-serial-port-sniffer-sniffing-physical-port-using-a-python.
+SimplexLogger is a unidirectional single-threaded logger.
 """
 __build__ = "110"
 __created__ = "2023-05-18_12-59-19"
