@@ -126,6 +126,4 @@ typically does the trick.
 - make some of the above configurable
 - Optional silent running with no stdout for batch processing
 
-But no promises at this point.
-
-/END
+No promises at this point.
