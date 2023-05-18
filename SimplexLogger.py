@@ -4,9 +4,9 @@ SimplexLogger.py
 
 SimplexLogger is a unidirectional single-threaded logger. The idea was derived from the code found at https://stackoverflow.com/questions/19231465/how-to-make-a-serial-port-sniffer-sniffing-physical-port-using-a-python.
 """
-__build__ = "106"
+__build__ = "108"
 __created__ = "2023-05-18_12-59-19"
-__updated__ = "2023-05-18_19-00-53"
+__updated__ = "2023-05-18_22-20-34"
 
 # GLOBAL
 CRLF = "\n"
@@ -15,20 +15,35 @@ NOCRLF = ""
 
 class SimplexLogger():
     """
-    A simple logger.
+    SimplexLogger
+
+    A simple serial port logger
     """
-    def __init__(self, baud_rate:int, com_port:str, log_filename:str):
+    def __init__(self, baud_rate:int, com_port:str, log_filename:str)->None:
+        """
+        Initialize SimplexLogger
+
+        baud_rate:str
+            The baud rate to use on COM port.
+
+        com_port:str
+            The COM port string in the form "COM#",e.g.: "COM2".
+
+        log_filename:str
+            A valid file or filepath to log into.
+        """
         self._declare()
         if baud_rate: self.baud_rate = baud_rate
         if com_port: self.com_port = com_port.upper()
         if log_filename: self.log_filename = log_filename
         print("Initialized {}.".format(self.__str__()))
 
-    def _declare(self):
+    def _declare(self)->None:
         """
-        Declare class variables.
+        Declare class variables
         """
         self.name = "SimplexLogger"
+        self.version = self.name + " b" + __build__
         self.baud_rate = int
         self.com_port = str
         self.log_filename = ""
@@ -50,7 +65,7 @@ class SimplexLogger():
 
     def run(self)->None:
         """
-        Monitor the port and log to file.
+        Monitor the port and (optionally) log to file
         """
         print("Monitor running. Stop with CTRL-C.")
         
@@ -84,9 +99,9 @@ class SimplexLogger():
            
     def __str__(self)->str:
         if self.log_filename:
-            return("{0} b{4} on com port: {2} with baud rate: {1} to log file: '{3}'".format(self.name, self.baud_rate, self.com_port, self.log_filename, __build__))
+            return("{0} on com port: {2} with baud rate: {1} to log file: '{3}'".format(self.version, self.baud_rate, self.com_port, self.log_filename))
         else:
-            return("{0} b{4} on com port: {2} with baud rate: {1} with no logging".format(self.name, self.baud_rate, self.com_port, self.log_filename, __build__))
+            return("{0} on com port: {2} with baud rate: {1} with no logging".format(self.version, self.baud_rate, self.com_port, self.log_filename))
 
-if __name__ == "__main__": print("This is not a script file.")
+if __name__ == "__main__": print("ERROR: This is not a script file.")
 #END
