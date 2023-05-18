@@ -120,5 +120,8 @@ typically does the trick.
 - The start and the stop of the session is logged with a ">>> <<<"-enclosed marker. This happens in screen interactive mode and in file logging mode. This should make both result types sufficiently machine-readable.
 - The current output format is strictly CSV, using a comma. You need to change the code, if you have a different requirement. If you can control the Arduino output, consider to also write comma-separated values to serial out.
 
-Futures: JSON config file, Optional silent running with no stdout for batch processing, make some of the above configurable - But no promises at this point.
+## Futures
+
+JSON config file, Optional silent running with no stdout for batch processing, make some of the above configurable - But no promises at this point.
+
 /END
