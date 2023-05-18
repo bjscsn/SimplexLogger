@@ -53,10 +53,9 @@ class SimplexLogger():
         Monitor the port and log to file.
         """
         print("Monitor running. Stop with CTRL-C.")
-        serial=None
-        import serial
         
-        listener = serial.Serial(port=self.com_port, baudrate=self.baud_rate)
+        import serial
+        monitor = serial.Serial(port=self.com_port, baudrate=self.baud_rate)
         
         if self.log_filename:
             with open(self.log_filename, "+a") as log_file:
@@ -64,7 +63,7 @@ class SimplexLogger():
                 log_file.write(self._toLogRecord(data=">>> Session Start <<<", separator=",") + CRLF)
                 try:
                     while True:
-                        buffer = listener.read_until()
+                        buffer = monitor.read_until()
                         print(self._toLogRecord(buffer.decode('utf-8').strip()), end=CR)
                         log_file.write(self._toLogRecord(data=buffer.decode('utf-8').strip(), separator=",") + CRLF)
                 except KeyboardInterrupt as ki:
