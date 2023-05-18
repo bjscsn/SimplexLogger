@@ -1,0 +1,5 @@
+{
+    "baud_rate": 9600,
+    "com_port": "com4",
+    "log_filename": "here_we_go.log"
+}
