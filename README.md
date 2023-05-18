@@ -2,7 +2,7 @@
 
 SimplexLogger is a unidirectional single-threaded (i.e. non-duplex) logger. It was written primarily to monitor the output of Arduino-controlled sensors in a microbiology lab.
 
-I did not know how to read from a COM port, so I searched the internet and found a note on stackoverflow. *shshank's* illustrated the basic principle at https://stackoverflow.com/questions/19231465/how-to-make-a-serial-port-sniffer-sniffing-physical-port-using-a-python (accessed:2023-05-18). I don't know *shshank*, but if you ever read this, please accept a heartfelt **thank you** and a **virtual beer**.
+I did not know how to read from a COM port, so I searched the internet and found a note on stackoverflow. *shshank* illustrated the basic principle at https://stackoverflow.com/questions/19231465/how-to-make-a-serial-port-sniffer-sniffing-physical-port-using-a-python (accessed:2023-05-18). I don't know *shshank*, but if you ever read this, please accept a heartfelt **thank you** and a **virtual beer**.
 
 The code here is obviously different.
 
