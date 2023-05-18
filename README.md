@@ -6,7 +6,7 @@ I did not know how to read from a COM port, so I searched the internet and found
 
 The code here is obviously different.
 
-##
+## Author
 
 Author: bjscsn@github, https://github.com/bjscsn
 
