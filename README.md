@@ -53,19 +53,6 @@ If *log_filename* is provided, the tool logs to the logfile name provided. The t
 The screen output behaviour however is different from the behaviour previously described. The tool announces itself and marks the start of data reading. The tool will also print the data read to screen, to allow monitoring of the data flow. The tool will however not advance the line.
 This makes the screen output very compact, which is an advantage during long runs. Logging is stopped by pressing CTL-C. When CTL-C is pressed, a session stop marker is logged to screen and the log file and the tools exists.
 
-## Notes
-- You need to install *pyserial*. You can get *pyserial* on pypi: https://pypi.org/project/pyserial.
-```
-pip install pyserial
-```
-typically does the trick.
-- The logger reads the full line. The line is terminated by \n of the respective platform. (See also: https://pyserial.readthedocs.io/en/latest/pyserial_api.html#serial.Serial.read_until)
-- The char conversion from b'string' is done decoding with 'utf-8'. You need to change the code, if you have a different requirement.
-- The start and the stop of the session is logged with a ">>> <<<"-enclosed marker. This happens in screen interactive mode and in file logging mode. This should make both result types sufficiently machine-readable.
-- The current output format is strictly CSV, using a comma. You need to change the code, if you have a different requirement. If you can control the Arduino output, consider to also write comma-separated values to serial out.
-
-Futures: JSON config file, Optional silent running with no stdout for batch processing, make some of the above configurable - But no promises at this point.
-
 ## Examples
 The following examples use a simple Arduino output simulator.
 
@@ -121,4 +108,17 @@ PS C:\DATA.TEST\SimplexLogger> type logfile.log
 PS C:\DATA.TEST\SimplexLogger>
 ```
 *Note that all session data is prefixed with a time stamp. The start and stop makers are different. 
+
+## Notes
+- You need to install *pyserial*. You can get *pyserial* on pypi: https://pypi.org/project/pyserial.
+```
+pip install pyserial
+```
+typically does the trick.
+- The logger reads the full line. The line is terminated by \n of the respective platform. (See also: https://pyserial.readthedocs.io/en/latest/pyserial_api.html#serial.Serial.read_until)
+- The char conversion from b'string' is done decoding with 'utf-8'. You need to change the code, if you have a different requirement.
+- The start and the stop of the session is logged with a ">>> <<<"-enclosed marker. This happens in screen interactive mode and in file logging mode. This should make both result types sufficiently machine-readable.
+- The current output format is strictly CSV, using a comma. You need to change the code, if you have a different requirement. If you can control the Arduino output, consider to also write comma-separated values to serial out.
+
+Futures: JSON config file, Optional silent running with no stdout for batch processing, make some of the above configurable - But no promises at this point.
 /END
