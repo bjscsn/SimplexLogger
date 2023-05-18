@@ -20,9 +20,9 @@ while 1:
     forwarder.write(serial_out)
 '''
 """
-__build__ = "100"
+__build__ = "103"
 __created__ = "2023-05-18_12-59-19"
-__updated__ = "2023-05-18_14-21-37"
+__updated__ = "2023-05-18_15-22-23"
 
 # GLOBAL
 CRLF = "\n"
