@@ -4,9 +4,9 @@ SimplexLogger.py
 
 SimplexLogger is a unidirectional single-threaded logger. The idea was derived from the code found at https://stackoverflow.com/questions/19231465/how-to-make-a-serial-port-sniffer-sniffing-physical-port-using-a-python.
 """
-__build__ = "108"
+__build__ = "110"
 __created__ = "2023-05-18_12-59-19"
-__updated__ = "2023-05-18_22-20-34"
+__updated__ = "2023-05-18_22-34-06"
 
 # GLOBAL
 CRLF = "\n"
@@ -103,5 +103,5 @@ class SimplexLogger():
         else:
             return("{0} on com port: {2} with baud rate: {1} with no logging".format(self.version, self.baud_rate, self.com_port, self.log_filename))
 
-if __name__ == "__main__": print("ERROR: This is not a script file.")
+if __name__ == "__main__": print("ERROR: This is a library file. Use 'runMonitor' to start monitoring.")
 #END

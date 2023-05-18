@@ -4,9 +4,9 @@ runMonitor.py
 
 Script to run the monotor for a com port.
 """
-__build__ = "112"
+__build__ = "114"
 __created__ = "2023-05-18_13-38-49"
-__updated__ = "2023-05-18_22-20-29"
+__updated__ = "2023-05-18_22-33-08"
 
 def parameters2dict(parameters)->dict:
     """
@@ -28,7 +28,7 @@ def pre():
     Pre-processing and commandline formatting.
     """
     from argparse import ArgumentParser
-    commandline_parser = ArgumentParser(prog="SimplexLogger",description="A simple serial port monitor.", epilog="Homepage: https://github.com/bjscsn/SimplexLogger. This software is available under the unlicense license (https://unlicense.org)")
+    commandline_parser = ArgumentParser(description="A simple serial port monitor - https://github.com/bjscsn/SimplexLogger", epilog="This software is available under the unlicense license (https://unlicense.org)")
     commandline_parser.add_argument("-b", "--baud_rate", dest="baud_rate", type=int, default = 9600, help="Baud rate of port.")
     commandline_parser.add_argument("-p", "--com_port", dest="com_port", required="true", help="The COM: port to be used. E.g. 'COM4'. Leave the colon away.")
     commandline_parser.add_argument("-l", "--log_filename", dest="log_filename", help="The log file name that you want to use. Must be a valid filename, or full file path on your platform.")
