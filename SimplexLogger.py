@@ -4,9 +4,9 @@ SimplexLogger.py
 
 SimplexLogger is a unidirectional single-threaded logger. The idea was derived from the code found at https://stackoverflow.com/questions/19231465/how-to-make-a-serial-port-sniffer-sniffing-physical-port-using-a-python.
 """
-__build__ = "105"
+__build__ = "106"
 __created__ = "2023-05-18_12-59-19"
-__updated__ = "2023-05-18_16-18-03"
+__updated__ = "2023-05-18_16-32-13"
 
 # GLOBAL
 CRLF = "\n"
@@ -24,21 +24,33 @@ class SimplexLogger():
         print("Initialized {}.".format(self.__str__()))
 
     def _declare(self):
+        """
+        Declare class variables.
+        """
         self.name = "SimplexLogger"
         self.baud_rate = int
         self.com_port = str
         self.log_filename = ""
 
     def _getTimeStamp(self)->str:
-        import datetime
-        timestamp = datetime.datetime.strftime(datetime.datetime.now(), "%Y-%m-%d_%H:%M:%M.%f")
-        return timestamp
+        """
+        Generate a time stamp string in the form 'YYYY-MM-DD_hh:mm:ss.uuu'. Note: The last three digits of the %f microsecond value are cut away, the value is not rounded.
+        """
+        from datetime import datetime
+        timestamp = datetime.strftime(datetime.now(), "%Y-%m-%d_%H:%M:%S.%f")
+        return timestamp[:-3]
     
-    def _toLogRecord(self, data, separator=": ")->str:
+    def _toLogRecord(self, data:str, separator=": ")->str:
+        """
+        Format the log record.
+        """
         result = "{}{}{}".format(self._getTimeStamp(), separator, data)
         return result
 
     def run(self)->None:
+        """
+        Monitor the port and log to file.
+        """
         print("Monitor running. Stop with CTRL-C.")
         serial=None
         import serial
@@ -67,11 +79,14 @@ class SimplexLogger():
                     buffer = listener.read_until()
                     print(buffer.decode('utf-8').strip())
             except KeyboardInterrupt as ki:
-                print(">>> Session End {} <<<".format(self._getTimeStamp()))
+                print(">>> Session   End {} <<<".format(self._getTimeStamp()))
                 print("Closing..")
            
     def __str__(self)->str:
-        return("{0} b{4} on com port: {2} with baud rate: {1} to log file: '{3}'".format(self.name, self.baud_rate, self.com_port, self.log_filename, __build__))
+        if self.log_filename:
+            return("{0} b{4} on com port: {2} with baud rate: {1} to log file: '{3}'".format(self.name, self.baud_rate, self.com_port, self.log_filename, __build__))
+        else:
+            return("{0} b{4} on com port: {2} with baud rate: {1} with no logging".format(self.name, self.baud_rate, self.com_port, self.log_filename, __build__))
 
 if __name__ == "__main__": print("This is not a script file.")
 #END
