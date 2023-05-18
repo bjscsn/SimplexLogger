@@ -104,4 +104,4 @@ class SimplexLogger():
             return("{0} on com port: {2} with baud rate: {1} with no logging".format(self.version, self.baud_rate, self.com_port, self.log_filename))
 
 if __name__ == "__main__": print("ERROR: This is a library file. Use 'runMonitor' to start monitoring.")
-#END
+# END
