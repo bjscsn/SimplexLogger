@@ -39,7 +39,7 @@ Command line interface. Use -h/--help for details
 Library: An intermediate abstraction between the CLI and the logger.
 
 ### SimplexLogger.py
-Library: The SimplexLogger class itself.
+Library: The SimplexLogger class.
 
 ## Expected Behaviour
 *runMonitor.py* starts the tool. *runMonitor.py* reads the command line parameters *baud_rate*, *com_port* and *log_filename*. *com_port* must be provided. *baud_rate* can be set to a valid baud rate, it defaults ot 9600. *log_filename* is optional. Records are read from the COM port. Records are expected to be terminated by CRLF. The net record is printed to *stdout* or to *log_filename*.
