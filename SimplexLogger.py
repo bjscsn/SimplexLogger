@@ -22,7 +22,7 @@ while 1:
 """
 __build__ = "103"
 __created__ = "2023-05-18_12-59-19"
-__updated__ = "2023-05-18_15-22-23"
+__updated__ = "2023-05-18_15-33-40"
 
 # GLOBAL
 CRLF = "\n"
@@ -54,7 +54,6 @@ class SimplexLogger():
         if self.log_filename:
             with open(self.log_filename, "+a") as log_file:
                 try:
-                    print("in here")
                     while True:
                         buffer = listener.read_until()
                         print(buffer.decode('utf-8').strip())
@@ -64,15 +63,14 @@ class SimplexLogger():
                     log_file.close()
         else:
             try:
-                print("in there")
                 while True:
                     buffer = listener.read_until()
                     print(buffer.decode('utf-8').strip())
             except KeyboardInterrupt as ki:
-                print("Closing port.")
+                print("Closing..")
            
     def __str__(self)->str:
-        return("{0} on com port: {2} with baud rate: {1} to log file: '{3}'".format(self.name, self.baud_rate, self.com_port, self.log_filename))
+        return("{0} b{4} on com port: {2} with baud rate: {1} to log file: '{3}'".format(self.name, self.baud_rate, self.com_port, self.log_filename, __build__))
 
 if __name__ == "__main__": print("This is not a script file.")
 #END
