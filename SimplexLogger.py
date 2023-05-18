@@ -3,26 +3,10 @@
 SimplexLogger.py
 
 SimplexLogger is a unidirectional single-threaded logger. The idea was derived from the code found at https://stackoverflow.com/questions/19231465/how-to-make-a-serial-port-sniffer-sniffing-physical-port-using-a-python.
-
-'''
-import serial
-
-baud_rate = 4800 #whatever baudrate you are listening to
-com_port1 = '/dev/tty1' #replace with your first com port path
-com_port2 = '/dev/tty2' #replace with your second com port path
-
-listener = serial.Serial(com_port1, baudrate)
-forwarder = serial.Serial(com_port2, baudrate)
-
-while 1:
-    serial_out = listener.read(size=1)
-    print serial_out #or write it to a file 
-    forwarder.write(serial_out)
-'''
 """
-__build__ = "103"
+__build__ = "104"
 __created__ = "2023-05-18_12-59-19"
-__updated__ = "2023-05-18_15-33-40"
+__updated__ = "2023-05-18_15-35-20"
 
 # GLOBAL
 CRLF = "\n"

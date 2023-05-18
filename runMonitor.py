@@ -4,9 +4,9 @@ runMonitor.py
 
 Script to run the monotor for a com port.
 """
-__build__ = "110"
+__build__ = "111"
 __created__ = "2023-05-18_13-38-49"
-__updated__ = "2023-05-18_15-26-30"
+__updated__ = "2023-05-18_15-35-08"
 
 def parameters2dict(parameters)->dict:
     """
@@ -25,8 +25,9 @@ def parameters2dict(parameters)->dict:
 
 def pre():
     """
-    Pre-p[rocessing and commandline formatting.
+    Pre-processing and commandline formatting.
     """
+    # TODO: Add config file.
     # TODO: Convert to a hierachical parser.
     from argparse import ArgumentParser
     commandline_parser = ArgumentParser(prog="Very simple COM port monitor.")
