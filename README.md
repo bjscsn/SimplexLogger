@@ -4,8 +4,6 @@ SimplexLogger is a unidirectional single-threaded (i.e. non-duplex) logger.
 
 The idea was derived from the example found at https://stackoverflow.com/questions/19231465/how-to-make-a-serial-port-sniffer-sniffing-physical-port-using-a-python.
 
-Idea: shshank
-
 Author: bjscsn@github https://github.com/bjscsn
 
 ## License
