@@ -2,7 +2,7 @@
 
 SimplexLogger is a unidirectional single-threaded (i.e. non-duplex) logger. It was written primarily to monitor the output of an Arduino-controlled sensors in a microbiology lab.
 
-I did not know how to read from a COM port, so I searched the internet and found a note on stackoverflow. The idea was derived from *shshank's* basic principle found at https://stackoverflow.com/questions/19231465/how-to-make-a-serial-port-sniffer-sniffing-physical-port-using-a-python  (accessed:2023-05-18). I don't know *shshank*, but if you, *shshank*, ever read this, please accept a heartfelt **thank you** and a **virtual beer**. (And, yes, I am German)
+I did not know how to read from a COM port, so I searched the internet and found a note on stackoverflow. I found *shshank's* basic principle at https://stackoverflow.com/questions/19231465/how-to-make-a-serial-port-sniffer-sniffing-physical-port-using-a-python  (accessed:2023-05-18). I don't know *shshank*, but if you ever read this, please accept a heartfelt **thank you** and a **virtual beer**.
 
 The code here is obviously different.
 
@@ -12,11 +12,9 @@ Author: bjscsn@github, https://github.com/bjscsn
 
 ## License
 
-This code is licensed under the *unlicense* license. (Don't laugh) 
+This code is licensed under the *unlicense* license.
 
-For the folks at my age: This code is public domain. Use it, copy it, modify it. I don't care. Just don't complain :-) .
-
-The original basic principle obviously remains under the original basic principle's license *CC BY-SA 3.0*.
+This code is public domain. Use it, copy it, modify it. I don't care. Just don't complain :-).
 
 ## Command line
 ```
@@ -33,6 +31,7 @@ optional arguments:
                         The log file name that you want to use. Must be a valid filename, or full file path on your platform.
 ```
 ## Structure
+
 ### runMonitor.py
 Command line interface. Use -h/--help for details
 
