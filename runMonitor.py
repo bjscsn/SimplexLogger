@@ -4,24 +4,9 @@ runMonitor.py
 
 Script to run the monitor for a com port.
 """
-__build__ = "114"
+__build__ = "116"
 __created__ = "2023-05-18_13-38-49"
-__updated__ = "2023-05-18_22-33-08"
-
-def parameters2dict(parameters)->dict:
-    """
-    Converts the config-relevant parameters to a dictionary.
-    """
-    result = dict()
-
-    result["baud_rate"] = parameters.baud_rate
-    result["com_port"] = parameters.com_port
-    if parameters.log_filename:
-        result["log_filename"] = parameters.log_filename
-    else:
-        result["log_filename"] = ""
-    
-    return result
+__updated__ = "2023-05-18_22-48-11"
 
 def pre():
     """
