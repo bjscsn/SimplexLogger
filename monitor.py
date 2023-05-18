@@ -2,7 +2,7 @@
 """
 monitor.py
 
-Monitoring script for COM port.
+Intermediate abstraction for the monitoring task.
 """
 __build__ = "104"
 __created__ = "2023-05-18_13-00-50"
