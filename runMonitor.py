@@ -2,7 +2,7 @@
 """
 runMonitor.py
 
-Script to run the monotor for a com port.
+Script to run the monitor for a com port.
 """
 __build__ = "114"
 __created__ = "2023-05-18_13-38-49"
