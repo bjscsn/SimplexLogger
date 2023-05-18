@@ -6,7 +6,7 @@ The idea was derived from the code found at https://stackoverflow.com/questions/
 
 Idea: shshank on stackoverflow https://stackoverflow.com/questions/19231465/how-to-make-a-serial-port-sniffer-sniffing-physical-port-using-a-python
 
-Author: bjscsn@github
+Author: bjscsn@github; https://github.com/bjscsn
 
 ## License
 
