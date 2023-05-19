@@ -17,7 +17,7 @@ This code is licensed under the *unlicense* license.
 This code is public domain. Use it, copy it, modify it. I don't care. Just don't complain :-).
 
 ## Command line
-```
+```powershell
 PS C:\DATA.TEST\SimplexLogger> python runMonitor.py -h
 usage: runMonitor.py [-h] [-b BAUD_RATE] -p COM_PORT [-l LOG_FILENAME]
 
@@ -61,7 +61,7 @@ This makes the screen output very compact, which is an advantage during long run
 The following examples use a simple Arduino output simulator.
 
 ### Screen Log Mode
-```
+```powershell
 PS C:\DATA.TEST\SimplexLogger> python runMonitor.py -p COM4
 Initialized SimplexLogger b106 on com port: COM4 with baud rate: 9600 with no logging.
 Monitor running. Stop with CTRL-C.
@@ -82,7 +82,7 @@ PS C:\DATA.TEST\SimplexLogger>
 *Note that everything between session start and session stop origiantes from the Arduino simulator. Your output will of course be different.*
 
 ### File Log Mode
-```
+```powershell
 PS C:\DATA.TEST\SimplexLogger> python runMonitor.py -p COM4 -l logfile.log
 Initialized SimplexLogger b106 on com port: COM4 with baud rate: 9600 to log file: 'logfile.log'.
 Monitor running. Stop with CTRL-C.
@@ -95,7 +95,7 @@ PS C:\DATA.TEST\SimplexLogger>
 *Note that the screen output does not advance, but remains on the same line.*
 
 #### Example logfile.log
-```
+```powershell
 PS C:\DATA.TEST\SimplexLogger> type logfile.log
 2023-05-18_21:33:39.243,>>> Session Start <<<
 2023-05-18_21:33:39.244,Value1,DataValue2,DATARECORD_END
@@ -111,7 +111,7 @@ PS C:\DATA.TEST\SimplexLogger> type logfile.log
 2023-05-18_21:33:50.485,>>> Session End <<<
 PS C:\DATA.TEST\SimplexLogger>
 ```
-*Note that all session data is prefixed with a time stamp. The start and stop makers are different. 
+*Note that all session data is prefixed with a time stamp. The start and stop makers are different.*
 
 ## Notes
 - You need to install *pyserial*. You can get *pyserial* on pypi: https://pypi.org/project/pyserial.
