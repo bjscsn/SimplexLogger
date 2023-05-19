@@ -58,7 +58,7 @@ The screen output behaviour however is different from the behaviour previously d
 This makes the screen output very compact, which is an advantage during long runs. Logging is stopped by pressing CTL-C. When CTL-C is pressed, a session stop marker is logged to screen and the log file and the tools exists.
 
 ## Examples
-The following examples use a simple Arduino output simulator.
+The following examples use a simple Arduino output tester.
 
 ### Screen Log Mode
 ```powershell
@@ -79,7 +79,7 @@ DATARECORD,5,8110,DataValue1,DataValue2,DATARECORD_END
 Closing..
 PS C:\DATA.TEST\SimplexLogger>
 ```
-*Note that everything between session start and session stop origiantes from the Arduino simulator. Your output will of course be different.*
+*Note that everything between session start and session stop above originates from this specific Arduino tester. Your output will of course be different.*
 
 ### File Log Mode
 ```powershell
