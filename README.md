@@ -18,8 +18,10 @@ This code is public domain. Use it, copy it, modify it. I don't care. Just don't
 
 ## Command line
 ```
-PS C:\DATA.TEST\SimplexLogger> py .\runMonitor.py --help  
-usage: Very simple COM port monitor. [-h] [-b BAUD_RATE] -p COM_PORT [-l LOG_FILENAME]
+PS C:\DATA.TEST\SimplexLogger> python runMonitor.py -h
+usage: runMonitor.py [-h] [-b BAUD_RATE] -p COM_PORT [-l LOG_FILENAME]
+
+A simple serial port monitor - https://github.com/bjscsn/SimplexLogger
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -29,6 +31,8 @@ optional arguments:
                         The COM: port to be used. E.g. 'COM4'. Leave the colon away.
   -l LOG_FILENAME, --log_filename LOG_FILENAME
                         The log file name that you want to use. Must be a valid filename, or full file path on your platform.
+
+This software is available under the unlicense license (https://unlicense.org)
 ```
 ## Structure
 
@@ -111,10 +115,15 @@ PS C:\DATA.TEST\SimplexLogger>
 
 ## Notes
 - You need to install *pyserial*. You can get *pyserial* on pypi: https://pypi.org/project/pyserial.
-```
-pip install pyserial
-```
-typically does the trick.
+
+    E.g.:
+
+    ```
+    pip install pyserial
+    ```
+
+    typically does the trick.
+    
 - The logger reads the full line. The line is terminated by \n of the respective platform. (See also: https://pyserial.readthedocs.io/en/latest/pyserial_api.html#serial.Serial.read_until)
 - The char conversion from b'string' is done decoding with 'utf-8'. You need to change the code, if you have a different requirement.
 - The start and the stop of the session is logged with a ">>> <<<"-enclosed marker. This happens in screen interactive mode and in file logging mode. This should make both result types sufficiently machine-readable.
